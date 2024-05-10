@@ -19,7 +19,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar bg-black text-white">
+        <div className="navbar ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -64,15 +64,15 @@ const Navbar = () => {
                     
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-3xl">WonderTour</a>
+                <a className="btn btn-ghost text-3xl">TechQuery</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><NavLink to="/"><a className=" p-2 hover:border-cyan-700 hover:border-b-4  rounded-lg">Home</a></NavLink></li>
                     <li>
-                        <NavLink to="/allTouristSpot"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">Queries</a></NavLink>
+                        <NavLink to="/Queries"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">Queries</a></NavLink>
                     </li>
-                    <li><NavLink to="/addTouristSpot"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">Recommendations for me</a></NavLink></li>
+                    <li><NavLink to="/addQueries"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">Recommendations for me</a></NavLink></li>
                     <li><NavLink to="/myListPage"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">My Queries</a></NavLink></li>
                     <li><NavLink to="/myListPage"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">My Recommendations</a></NavLink></li>
                 </ul>
@@ -92,8 +92,8 @@ const Navbar = () => {
     </>
 ) : (
     <div className="hidden sm:inline-block"> {/* Wrap the login and register buttons in a div with a conditional class */}
-        <NavLink to="/login"><a className="btn bg-black border-black  font-bold mr-2 text-white hover:bg-cyan-700 hover:border-cyan-700">Login</a></NavLink>
-        <NavLink to="/register"><a className="btn bg-black border-black  font-bold mr-2 text-white hover:bg-cyan-700 hover:border-cyan-700">Register</a></NavLink>
+        <NavLink to="/login"><a className="btn bg-cyan-700  font-bold mr-2 text-white hover:bg-cyan-700 hover:border-cyan-700">Login</a></NavLink>
+        <NavLink to="/register"><a className="btn bg-cyan-700  font-bold mr-2 text-white hover:bg-cyan-700 hover:border-cyan-700">Register</a></NavLink>
     </div>
 )}
 

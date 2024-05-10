@@ -11,6 +11,8 @@ import Home from './Home';
 import Register from './Register';
 import AuthProvider from './AuthProvider';
 import Login from './Login.jsx';
+import AddQueries from './AddQueries.jsx';
+import Queries from './Queries.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,15 @@ const router = createBrowserRouter([
       {
         path:"/login",
         element: <Login></Login>
+      },
+      {
+        path:"/addQueries",
+        element:<AddQueries></AddQueries>
+      },
+      {
+        path:"/Queries",
+        element:<Queries></Queries>,
+        loader: () => fetch(`http://localhost:5000/queries`)
       }
     ]
   },

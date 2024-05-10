@@ -4,9 +4,10 @@ import Navbar from "./Navbar";
 const Root = () => {
     return (
         <div> 
-            <Navbar></Navbar>
+            <div className="lg:mx-8">
+                <Navbar></Navbar>
+            </div>
             <Outlet></Outlet>
-            <h2>Hello my name is ayon jr</h2>
             
         </div>
     );
