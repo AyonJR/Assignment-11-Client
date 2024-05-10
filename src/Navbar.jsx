@@ -70,10 +70,11 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li><NavLink to="/"><a className=" p-2 hover:border-cyan-700 hover:border-b-4  rounded-lg">Home</a></NavLink></li>
                     <li>
-                        <NavLink to="/allTouristSpot"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">All Tourists Spot</a></NavLink>
+                        <NavLink to="/allTouristSpot"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">Queries</a></NavLink>
                     </li>
-                    <li><NavLink to="/addTouristSpot"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">Add Tourist Spot</a></NavLink></li>
-                    <li><NavLink to="/myListPage"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">My List</a></NavLink></li>
+                    <li><NavLink to="/addTouristSpot"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">Recommendations for me</a></NavLink></li>
+                    <li><NavLink to="/myListPage"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">My Queries</a></NavLink></li>
+                    <li><NavLink to="/myListPage"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">My Recommendations</a></NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end"> 
@@ -91,8 +92,8 @@ const Navbar = () => {
     </>
 ) : (
     <div className="hidden sm:inline-block"> {/* Wrap the login and register buttons in a div with a conditional class */}
-        <NavLink to="/login"><a className="btn  font-bold mr-2 text-purple-700">Login</a></NavLink>
-        <NavLink to="/register"><a className="btn font-bold text-purple-700">Register</a></NavLink>
+        <NavLink to="/login"><a className="btn bg-black border-black  font-bold mr-2 text-white hover:bg-cyan-700 hover:border-cyan-700">Login</a></NavLink>
+        <NavLink to="/register"><a className="btn bg-black border-black  font-bold mr-2 text-white hover:bg-cyan-700 hover:border-cyan-700">Register</a></NavLink>
     </div>
 )}
 

@@ -11,13 +11,15 @@ const Register = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const handleSignUp = async (e) => {
+    const handleSignUp = async (e) => { 
+        console.log("yes im clicking")
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
         const email = form.email.value;
         const photo = form.photo.value;
         const password = form.password.value;
+
 
         try {
             await createUser(email, password);
@@ -49,7 +51,7 @@ const Register = () => {
 		<h1 className="my-3 text-4xl font-bold">Sign Up</h1>
 		<p className="text-sm dark:text-gray-600">Sign up with your account</p>
 	</div>
-	<form noValidate="" action="" onSubmit={handleSignUp} className="space-y-12">
+	<form  onSubmit={handleSignUp} className="space-y-12">
 		<div className="space-y-4">
         <div>
 				<label  className="block mb-2 text-sm">Your Name </label>
@@ -74,7 +76,7 @@ const Register = () => {
         
 		<div className="space-y-2">
 			<div>
-				<button type="button" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-cyan-700 dark:text-gray-50">Sign up</button>
+				<button className="w-full px-8 py-3 font-semibold rounded-md dark:bg-cyan-700 dark:text-gray-50">Sign up</button>
 			</div>
 			<p className="px-6 text-sm text-center dark:text-gray-600">Already have an account
 				<Link to={"/login"}>
