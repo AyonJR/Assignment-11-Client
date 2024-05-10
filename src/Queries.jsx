@@ -21,7 +21,7 @@ const Queries = () => {
                     <button className="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform bg-white rounded hover:bg-gray-200 focus:bg-gray-400 focus:outline-none">Add to cart</button>
                 </div>
             </div> */}
-           <div className="mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+           <div className="mt-10 mx-5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
            {
             queries.map(query => <SingleQuery key={query._id} query={query}></SingleQuery>)
 

@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Root = () => {
     return (
-        <div> 
+        <div className=""> 
             <div className="lg:mx-8">
                 <Navbar></Navbar>
             </div>
