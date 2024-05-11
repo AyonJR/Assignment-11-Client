@@ -67,12 +67,12 @@ const Navbar = () => {
                 <a className="btn btn-ghost text-3xl">TechQuery</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal mr-2 px-1">
                     <li><NavLink to="/"><a className=" p-2 hover:border-cyan-700 hover:border-b-4  rounded-lg">Home</a></NavLink></li>
                     <li>
                         <NavLink to="/Queries"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">Queries</a></NavLink>
                     </li>
-                    <li><NavLink to="/addQueries"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">Recommendations for me</a></NavLink></li>
+                    <li><NavLink to="/addQueries"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">Recommendations</a></NavLink></li>
                     <li><NavLink to="/myQueries"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">My Queries</a></NavLink></li>
                     <li><NavLink to="/myListPage"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">My Recommendations</a></NavLink></li>
                 </ul>

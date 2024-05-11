@@ -14,6 +14,8 @@ import Login from './Login.jsx';
 import AddQueries from './AddQueries.jsx';
 import Queries from './Queries.jsx';
 import MyQueries from './MyQueries.jsx';
+import UpdateMyQuery from './UpdateMyQuery.jsx';
+import MyQueryDetails from './MyQueryDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,16 @@ const router = createBrowserRouter([
         path:"/myQueries",
         element:<MyQueries></MyQueries>,
       },
+      {
+        path:"/updateQuery/:id",
+        element:<UpdateMyQuery></UpdateMyQuery>,
+        loader: ({params}) => fetch(`http://localhost:5000/queries/${params.id}`)
+      },
+      {
+        path:"/queryDetails/:id",
+        element:<MyQueryDetails></MyQueryDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/query/${params.id}`)
+      }
     ]
   },
 ]);
