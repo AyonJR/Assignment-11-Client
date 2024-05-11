@@ -61,14 +61,14 @@ const AddQueries = () => {
     };
 
     return (
-        <div className="max-w-lg mx-auto">
-            <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div className="max-w-lg mt-8 mx-auto">
+            <form onSubmit={handleSubmit} className="bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="productName">
+                    <label className="block text-orange-600 text-sm font-bold mb-2" htmlFor="productName">
                         Product Name
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-800 text-white leading-tight focus:outline-none focus:shadow-outline"
                         id="productName"
                         type="text"
                         name="productName"
@@ -76,11 +76,11 @@ const AddQueries = () => {
                     />
                 </div>
                 <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="productBrand">
+                    <label className="block text-orange-600 text-sm font-bold mb-2" htmlFor="productBrand">
                         Product Brand
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-800 text-orange-600 leading-tight focus:outline-none focus:shadow-outline"
                         id="productBrand"
                         type="text"
                         name="productBrand"
@@ -88,11 +88,11 @@ const AddQueries = () => {
                     />
                 </div>
                 <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="imageUrl">
+                    <label className="block text-orange-600 text-sm font-bold mb-2" htmlFor="imageUrl">
                         Product Image URL
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-800 text-orange-600 leading-tight focus:outline-none focus:shadow-outline"
                         id="imageUrl"
                         type="text"
                         name="imageUrl"
@@ -100,11 +100,11 @@ const AddQueries = () => {
                     />
                 </div>
                 <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="queryTitle">
+                    <label className="block text-orange-600 text-sm font-bold mb-2" htmlFor="queryTitle">
                         Query Title
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-800 text-orange-600 leading-tight focus:outline-none focus:shadow-outline"
                         id="queryTitle"
                         type="text"
                         name="queryTitle"
@@ -112,11 +112,11 @@ const AddQueries = () => {
                     />
                 </div>
                 <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="boycottingReason">
+                    <label className="block text-orange-600 text-sm font-bold mb-2" htmlFor="boycottingReason">
                         Boycotting Reason Details
                     </label>
                     <textarea
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-800 text-orange-600 leading-tight focus:outline-none focus:shadow-outline"
                         id="boycottingReason"
                         name="boycottingReason"
                         
@@ -125,7 +125,7 @@ const AddQueries = () => {
                 </div>
                 <div className="flex justify-center w-full">
                     <button
-                        className="bg-cyan-700 hover:bg-cyan-900 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
+                        className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
                         type="submit"
                     >
                         Add Query

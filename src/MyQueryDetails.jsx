@@ -5,9 +5,10 @@ import { AuthContext } from "./AuthProvider";
 const MyQueryDetails = () => {
 
     const { user } = useContext(AuthContext)
+    console.log(user)
 
-    const loggedInUserName = user.displayName ;
-    const loggedInUserEmail = user.email ;
+    const loggedInUserName = user?.displayName ;
+    const loggedInUserEmail = user?.email ;
     const loggedInUserDate = new Date().toLocaleString();
 
     const query = useLoaderData();
@@ -27,6 +28,9 @@ const MyQueryDetails = () => {
  //form 
 
   const handleSubmit = event => {
+
+    console.log(user)
+
     const form = event.target ;
     
     const name = form.name.value
@@ -34,7 +38,23 @@ const MyQueryDetails = () => {
     const image = form.image.value
     const reason = form.reason.value
 
-    const recommend = { _id , queryTitle , productName , userName , userEmail , currentDateAndTime , loggedInUserName , loggedInUserEmail , loggedInUserDate }
+    const recommend = { _id , queryTitle , productName , userName , userEmail , currentDateAndTime , loggedInUserName , loggedInUserEmail , loggedInUserDate , name , title , image , reason }
+
+    console.log(recommend)
+
+    //send data to the server
+
+    fetch('http://localhost:5000/recommendations' , {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(recommend)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
 
   }
 

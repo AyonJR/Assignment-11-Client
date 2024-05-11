@@ -19,7 +19,7 @@ const SingleQuery = ({ query }) => {
                 <div className="px-4 py-2 flex justify-between">
                     <h1 className="text-xl font-bold text-gray-800 uppercase ">{productName}</h1>
                     <div className="avatar mt-2 indicator mr-7">
-                        <span className="indicator-item bg-cyan-700 border-cyan-700 font-semibold badge mr-6 badge-secondary">{userName}</span>
+                        <span className="indicator-item bg-orange-600 border-orange-600 font-semibold badge mr-6 badge-secondary">{userName}</span>
                         <div className="w-12 h-12 rounded-lg">
                             <img alt="Tailwind CSS examples" src={userPhoto} />
                         </div>
@@ -32,7 +32,7 @@ const SingleQuery = ({ query }) => {
 
                 <img className="object-center w-full h-48 mt-2" src={imageUrl} alt="NIKE AIR" />
 
-                <div className="flex items-center justify-between px-4 py-2 bg-cyan-800">
+                <div className="flex items-center justify-between px-4 py-2 bg-orange-600">
                     <h1 className="text-lg font-bold text-white">$129</h1>
                     <button className="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform bg-white rounded hover:bg-gray-200 focus:bg-gray-400 focus:outline-none">Recommend</button>
                 </div>
