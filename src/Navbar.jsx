@@ -73,7 +73,7 @@ const Navbar = () => {
                         <NavLink to="/Queries"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">Queries</a></NavLink>
                     </li>
                     <li><NavLink to="/addQueries"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">Recommendations for me</a></NavLink></li>
-                    <li><NavLink to="/myListPage"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">My Queries</a></NavLink></li>
+                    <li><NavLink to="/myQueries"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">My Queries</a></NavLink></li>
                     <li><NavLink to="/myListPage"><a className="hover:border-cyan-700 hover:border-b-4 p-2 rounded-lg">My Recommendations</a></NavLink></li>
                 </ul>
             </div>

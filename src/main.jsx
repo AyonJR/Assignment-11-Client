@@ -13,6 +13,7 @@ import AuthProvider from './AuthProvider';
 import Login from './Login.jsx';
 import AddQueries from './AddQueries.jsx';
 import Queries from './Queries.jsx';
+import MyQueries from './MyQueries.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,11 @@ const router = createBrowserRouter([
         path:"/Queries",
         element:<Queries></Queries>,
         loader: () => fetch(`http://localhost:5000/queries`)
-      }
+      },
+      {
+        path:"/myQueries",
+        element:<MyQueries></MyQueries>,
+      },
     ]
   },
 ]);

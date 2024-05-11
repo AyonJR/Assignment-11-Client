@@ -15,7 +15,7 @@ const SingleQuery = ({ query }) => {
 
     return (
         <div>
-            <div className="w-[420px]  overflow-hidden bg-white rounded-lg shadow-lg ">
+            <div className="w-[400px]  overflow-hidden bg-white rounded-lg shadow-lg ">
                 <div className="px-4 py-2 flex justify-between">
                     <h1 className="text-xl font-bold text-gray-800 uppercase ">{productName}</h1>
                     <div className="avatar mt-2 indicator mr-7">
