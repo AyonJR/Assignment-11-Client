@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import HomeSingleCard from "./HomeSingleCard";
+import 'animate.css';
+
 
 const HomePageCards = () => {
     const [cards, setCards] = useState([]);
@@ -22,7 +24,11 @@ const HomePageCards = () => {
 
     return (
         <div>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+               <div className="flex justify-center">
+            <h2 className="text-3xl font-semibold animate__animated animate__bounce">Recent Queries</h2>
+        </div>
+
+            <div className="grid lg:grid-cols-3 mt-16 md:grid-cols-2 grid-cols-1 gap-3">
                 {
                     cards.map(card => <HomeSingleCard key={card._id} card={card}></HomeSingleCard>)
                 }

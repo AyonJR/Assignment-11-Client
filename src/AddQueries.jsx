@@ -68,7 +68,7 @@ const AddQueries = () => {
                         Product Name
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-50 text-white leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-50  leading-tight focus:outline-none focus:shadow-outline"
                         id="productName"
                         type="text"
                         name="productName"
