@@ -6,17 +6,38 @@ const MyRecommendations = () => {
     const { user } = useContext(AuthContext);
     const [recommendations, setRecommendations] = useState([]);
 
+
     useEffect(() => {
-        const getData = async () => {
-            try {
-                const { data } = await axios(`http://localhost:5000/recommendations/${user?.email}`);
-                setRecommendations(data);
-            } catch (error) {
-                console.error("Error fetching recommendations:", error);
-            }
-        };
-        getData();
+       
     }, [user]);
+    const getData = async () => {
+        try {
+            const { data } = await axios(`http://localhost:5000/recommendations/${user?.email}`);
+            setRecommendations(data);
+        } catch (error) {
+            console.error("Error fetching recommendations:", error);
+        }
+    };
+    getData();
+
+ //delete 
+
+ const handleDelete = async id => {
+   
+    
+    const {data} = await axios.delete(`http://localhost:5000/recommendations/${id}`)
+    console.log(data)
+    if(data.deletedCount >1){
+
+        alert("deleted succesfully")
+        getData()
+    }
+
+
+
+
+}
+
 
     return (
         <div>
@@ -32,6 +53,7 @@ const MyRecommendations = () => {
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Recommended Product</th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reason</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
                         </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
@@ -42,6 +64,7 @@ const MyRecommendations = () => {
                                 <td className="px-6 py-4 whitespace-nowrap">{recommendation.name}</td>
                                 <td className="px-6 py-4 whitespace-nowrap">{recommendation.title}</td>
                                 <td className="px-6 py-4 whitespace-nowrap">{recommendation.reason}</td>
+                                <td className="px-6 py-4 whitespace-nowrap"><button onClick={()=> handleDelete(recommendation._id)} className="p-2"><img className="h-5" src="https://i.ibb.co/4PmzXdn/delete.png" alt="" /></button></td>
                             </tr>
                         ))}
                     </tbody>

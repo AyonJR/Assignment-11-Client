@@ -66,11 +66,11 @@ const Banner = () => {
 
 
       <div className="relative w-[900px] bg-gradient-to-r from-gray-300 to-gray-600 mx-auto bottom-40">
-      {/* <img
-        src="assets/svg/Business_SVG.svg"
+      <img
+        src="https://i.ibb.co/gdCrVNZ/cover-and-banner-of-working-desk-with-gadget-top-view-of-table-working-and-free-space-for-text-with.jpg"
         className="absolute inset-0 object-cover w-full h-full"
         alt=""
-      /> */}
+      />
       <div className="relative bg-opacity-75 bg-deep-purple-accent-700">
         <svg
           className="absolute inset-x-0 bottom-0 text-white"
@@ -83,7 +83,7 @@ const Banner = () => {
         </svg>
         <div className="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="flex flex-col items-center justify-between xl:flex-row">
-            <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+            <div className="w-full max-w-xl lg:ml-16 mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
                 The quick, brown fox <br className="hidden md:block" />
                 jumps over a lazy dog
@@ -96,7 +96,7 @@ const Banner = () => {
               <a
                 href="/"
                 aria-label=""
-                className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
+                className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700 text-white" 
               >
                 Learn more
                 <svg

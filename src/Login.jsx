@@ -4,6 +4,7 @@ import { AuthContext } from "./AuthProvider";
 import {  useLocation, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 import "sweetalert2/dist/sweetalert2.css";
+import axios from "axios";
 
 const Login = () => { 
 
@@ -13,7 +14,10 @@ const Login = () => {
 
     const handleGoogleLogin = async () => {
         try {
-            await loginUserWithGoogle();
+              await loginUserWithGoogle();
+			
+
+
             Swal.fire({
                 title: 'Success!',
                 text: 'Logged in with Google successfully',
