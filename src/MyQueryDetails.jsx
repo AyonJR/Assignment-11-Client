@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 
 const MyQueryDetails = () => {
-
+     
     const { user } = useContext(AuthContext)
+
     console.log(user)
 
     const loggedInUserName = user?.displayName ;
@@ -12,7 +13,7 @@ const MyQueryDetails = () => {
     const loggedInUserDate = new Date().toLocaleString();
 
     const query = useLoaderData();
-    const { _id ,
+    const {  
         productName,
         productBrand,
         imageUrl,
@@ -27,7 +28,8 @@ const MyQueryDetails = () => {
 
  //form 
 
-  const handleSubmit = event => {
+  const handleSubmit = event => { 
+
 
     console.log(user)
 
@@ -38,7 +40,7 @@ const MyQueryDetails = () => {
     const image = form.image.value
     const reason = form.reason.value
 
-    const recommend = { _id , queryTitle , productName , userName , userEmail , currentDateAndTime , loggedInUserName , loggedInUserEmail , loggedInUserDate , name , title , image , reason }
+    const recommend = {  queryTitle , productName , userName , userEmail , currentDateAndTime , loggedInUserName , loggedInUserEmail , loggedInUserDate , name , title , image , reason }
 
     console.log(recommend)
 

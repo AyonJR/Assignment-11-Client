@@ -31,7 +31,7 @@ const MySingleQuery = ({mySingleQuery , handleDelete}) => {
         <div className="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
             <h3 className="py-2 font-bold tracking-wide text-center text-gray-800 uppercase dark:text-white">{productName}</h3>
     
-            <div className="flex items-center justify-between px-3 py-2 bg-cyan-800 dark:bg-cyan-800">
+            <div className="flex items-center justify-between px-3 py-2 bg-cyan-800 dark:bg-gray-800">
           <Link to={`/updateQuery/${_id}`}>
           <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">Update</button>
           </Link>
@@ -39,7 +39,7 @@ const MySingleQuery = ({mySingleQuery , handleDelete}) => {
             </div>
             <div className="flex  justify-center">
             <Link to={`/queryDetails/${_id}`}>
-          <button className="px-2 w-full bg-cyan-800 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform  rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">Details</button>
+          <button className="px-2 w-full bg-orange-600 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform  rounded hover:bg-gray-700 dark:hover:bg-orange-700 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">Details</button>
           </Link>
             </div>
         </div>

@@ -21,7 +21,6 @@ const MyQueries = () => {
         }
         getData()
 
-console.log(query)
 
 //delete
 const handleDelete = async id => {

@@ -16,6 +16,7 @@ import Queries from './Queries.jsx';
 import MyQueries from './MyQueries.jsx';
 import UpdateMyQuery from './UpdateMyQuery.jsx';
 import MyQueryDetails from './MyQueryDetails.jsx';
+import MyRecommendations from './MyRecommendations.jsx';
 
 const router = createBrowserRouter([
   {
@@ -56,7 +57,11 @@ const router = createBrowserRouter([
         path:"/queryDetails/:id",
         element:<MyQueryDetails></MyQueryDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/query/${params.id}`)
-      }
+      },
+      {
+        path:"/myRecommendations",
+        element:<MyRecommendations></MyRecommendations>
+      },
     ]
   },
 ]);
