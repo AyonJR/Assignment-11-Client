@@ -17,6 +17,7 @@ import MyQueries from './MyQueries.jsx';
 import UpdateMyQuery from './UpdateMyQuery.jsx';
 import MyQueryDetails from './MyQueryDetails.jsx';
 import MyRecommendations from './MyRecommendations.jsx';
+import RecommendationsForMe from './RecommendationsForMe.jsx';
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path:"/myRecommendations",
         element:<MyRecommendations></MyRecommendations>
+      },
+      {
+        path:"/recommendationsForMe",
+        element:<RecommendationsForMe></RecommendationsForMe>
       },
     ]
   },

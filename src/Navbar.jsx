@@ -72,7 +72,7 @@ const Navbar = () => {
                     <li>
                         <NavLink to="/Queries"><a className=" p-2 rounded-lg">Queries</a></NavLink>
                     </li>
-                    <li><NavLink to="/addQueries"><a className=" p-2 rounded-lg">Recommendations</a></NavLink></li>
+                    <li><NavLink to="/recommendationsForMe"><a className=" p-2 rounded-lg">Recommendations</a></NavLink></li>
                     <li><NavLink to="/myQueries"><a className=" p-2 rounded-lg">My Queries</a></NavLink></li>
                     <li><NavLink to="/myRecommendations"><a className=" p-2 rounded-lg">My Recommendations</a></NavLink></li>
                 </ul>
