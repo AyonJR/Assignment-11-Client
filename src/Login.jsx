@@ -15,10 +15,7 @@ const Login = () => {
     const handleGoogleLogin = async () => {
         try {
               await loginUserWithGoogle();
-			
-
-
-            Swal.fire({
+                Swal.fire({
                 title: 'Success!',
                 text: 'Logged in with Google successfully',
                 icon: 'success',

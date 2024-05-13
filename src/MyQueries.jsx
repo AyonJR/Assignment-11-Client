@@ -18,7 +18,7 @@ const MyQueries = () => {
      } , [user])
      const getData = async ()=> {
             const { data } = await axios( 
-                `http://localhost:5000/queries/${user?.email}`
+                `http://localhost:5000/queries/${user?.email}`, {withCredentials:true}
             )
             setQuery(data)
         }
