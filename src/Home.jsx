@@ -1,5 +1,6 @@
 import AboutUs from "./AboutUs";
 import Banner from "./Banner";
+import CTAsection from "./CTAsection";
 import HomePageCards from "./HomePageCards";
 import StatisticsSection from "./StatisticsSection";
 
@@ -15,7 +16,7 @@ const Home = () => {
             <StatisticsSection></StatisticsSection>
            </div>
            <div className="mt-16">
-           <AboutUs></AboutUs>
+           <CTAsection></CTAsection>
            </div>
         </div>
     );

@@ -28,7 +28,7 @@ const MyQueryDetails = () => {
 
     const queryId = _id 
 
-   console.log('query', queryId)
+//    console.log('query', queryId)
  //form 
 
   const handleSubmit = event => { 
