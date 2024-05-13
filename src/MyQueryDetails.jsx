@@ -5,6 +5,7 @@ import { AuthContext } from "./AuthProvider";
 const MyQueryDetails = () => {
      
     const { user } = useContext(AuthContext)
+    const [queryRecommendation , setQueryRecommend] = useState(0)
 
     console.log(user)
 
@@ -13,7 +14,7 @@ const MyQueryDetails = () => {
     const loggedInUserDate = new Date().toLocaleString();
 
     const query = useLoaderData();
-    const {  
+    const {  _id ,
         productName,
         productBrand,
         imageUrl,
@@ -26,10 +27,17 @@ const MyQueryDetails = () => {
         recommendation
     } = query;
 
+    const queryId = _id 
+
+   console.log('query', queryId)
  //form 
 
   const handleSubmit = event => { 
+  
+    event.preventDefault();
+   
 
+    setQueryRecommend(queryRecommendation + 1);
 
     console.log(user)
 
@@ -40,7 +48,7 @@ const MyQueryDetails = () => {
     const image = form.image.value
     const reason = form.reason.value
 
-    const recommend = {  queryTitle , productName , userName , userEmail , currentDateAndTime , loggedInUserName , loggedInUserEmail , loggedInUserDate , name , title , image , reason }
+    const recommend = { queryId , queryTitle , productName , userName , userEmail , currentDateAndTime , loggedInUserName , loggedInUserEmail , loggedInUserDate , name , title , image , reason , queryRecommendation : queryRecommendation + 1 }
 
     console.log(recommend)
 
@@ -57,6 +65,8 @@ const MyQueryDetails = () => {
     .then(data => {
         console.log(data)
     })
+
+   form.reset()
 
   }
 

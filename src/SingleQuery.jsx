@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SingleQuery = ({ query }) => {
-    const { 
+    const { _id ,
         productName,
         productBrand,
         imageUrl,
@@ -29,7 +30,9 @@ const SingleQuery = ({ query }) => {
             <img src={imageUrl} alt={productName} className="w-full h-48 object-cover " />
             <div className="px-4 py-2 bg-gray-800 text-white flex justify-between items-center">
                 <h1 className="text-lg font-bold animate-pulse">{currentDateAndTime}</h1>
+                <Link to={`/queryDetails/${_id}`}>
                 <button className="px-3 py-1 text-xs font-semibold bg-white text-gray-900 rounded-lg hover:bg-gray-200 focus:bg-gray-400 focus:outline-none animate-heartBeat">Recommend</button>
+                </Link>
             </div>
         </div>
     );

@@ -53,7 +53,7 @@ const handleDelete = async id => {
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 p-8 text-white">
         <div className="flex justify-center mt-[30vh]">
-        <h1 className="text-2xl font-semibold text-white mb-6 animate-pulse">Welcome to Query Manager</h1>
+        <h1 className="text-2xl font-semibold text-white mb-6 animate-pulse">Find your best solution....</h1>
         </div>
         <div className="flex justify-center ">
         <Link to={'/addQueries'}>
@@ -64,6 +64,9 @@ const handleDelete = async id => {
         </div>
       </div>
     </div>
+            <div className="mt-14 flex justify-center">
+              <h2 className="text-3xl font-semibold animate-pulse">My Queries</h2>
+            </div>
             <div className="grid mt-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
                 {
                   query.map(mySingleQuery => <MySingleQuery key={mySingleQuery._id} mySingleQuery={mySingleQuery} handleDelete={handleDelete}></MySingleQuery>)
