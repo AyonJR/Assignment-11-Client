@@ -5,7 +5,6 @@ import { AuthContext } from "./AuthProvider";
 const MyQueryDetails = () => {
      
     const { user } = useContext(AuthContext)
-    const [queryRecommendation , setQueryRecommend] = useState(0)
 
     console.log(user)
 
@@ -37,7 +36,6 @@ const MyQueryDetails = () => {
     event.preventDefault();
    
 
-    setQueryRecommend(queryRecommendation + 1);
 
     console.log(user)
 
@@ -48,7 +46,7 @@ const MyQueryDetails = () => {
     const image = form.image.value
     const reason = form.reason.value
 
-    const recommend = { queryId , queryTitle , productName , userName , userEmail , currentDateAndTime , loggedInUserName , loggedInUserEmail , loggedInUserDate , name , title , image , reason , queryRecommendation : queryRecommendation + 1 }
+    const recommend = { queryId , queryTitle , productName , userName , userEmail , currentDateAndTime , loggedInUserName , loggedInUserEmail , loggedInUserDate , name , title , image , reason , recommendation }
 
     console.log(recommend)
 

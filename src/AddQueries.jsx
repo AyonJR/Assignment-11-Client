@@ -5,7 +5,6 @@ import "sweetalert2/dist/sweetalert2.css";
 
 const AddQueries = () => {
    
-   const [recommendation , setRecommendation] = useState(0)
 
     const {user} = useContext(AuthContext)
     console.log(user)
@@ -15,7 +14,7 @@ const AddQueries = () => {
     const currentDateAndTime = new Date().toLocaleString(); // Get the current date and time in a readable format
 
 
-    const userInfo = { userEmail , userName , userPhoto , currentDateAndTime , recommendation}
+    const userInfo = { userEmail , userName , userPhoto , currentDateAndTime , }
     console.log(userInfo)
   
  const handleSubmit = async (e) => { 
@@ -28,7 +27,6 @@ const AddQueries = () => {
     const queryTitle = form.queryTitle.value;
     const boycottingReason = form.boycottingReason.value; 
 
-    setRecommendation(recommendation + 1)
 
     form.reset() 
 
@@ -42,7 +40,7 @@ const AddQueries = () => {
         userName : userName ,
         userPhoto : userPhoto ,
         currentDateAndTime : currentDateAndTime ,
-        recommendation : recommendation
+        recommendation : 0
       }
 
     fetch('http://localhost:5000/queries' , {

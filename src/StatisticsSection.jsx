@@ -39,7 +39,7 @@ const StatisticsSection = () => {
         <h3 className="text-xl font-semibold text-gray-900 mb-2">
             Total Queries
         </h3>
-        <p className="text-gray-700">
+        <p className="text-gray-700 text-xl font-semibold">
             {totalQueries}
         </p>
     </div>
@@ -52,7 +52,7 @@ const StatisticsSection = () => {
         <h3 className="text-xl font-semibold text-gray-900 mb-2">
             Total Solutions
         </h3>
-        <p className="text-gray-700">
+        <p className="text-gray-700 text-xl font-semibold">
             {totalSolutions}
         </p>
     </div>
@@ -65,7 +65,7 @@ const StatisticsSection = () => {
         <h3 className="text-xl font-semibold text-gray-900 mb-2">
             Total Users
         </h3>
-        <p className="text-gray-700">
+        <p className="text-gray-700 text-xl font-semibold">
             {totalUsers}
         </p>
     </div>
