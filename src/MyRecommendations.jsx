@@ -7,7 +7,12 @@ import Swal from 'sweetalert2';
 const MyRecommendations = () => {
     const { user } = useContext(AuthContext);
     const [recommendations, setRecommendations] = useState([]);
+    const [decrement , setDecrement] = useState([])
+    
+//   asdasdasdasd---------------------------------
+   
 
+// asdasdadasdasdasdasdasdadasdasd=-=-=--=-=-=-=-=-=-=-=
     useEffect(() => {
         getData();
     }, [user]);
@@ -16,6 +21,7 @@ const MyRecommendations = () => {
         try {
             const { data } = await axios.get(`https://assignment-11-pi.vercel.app/recommendations/${user?.email}`);
             setRecommendations(data);
+            console.log(recommendations)
         } catch (error) {
             console.error("Error fetching recommendations:", error);
         }
@@ -46,6 +52,7 @@ const MyRecommendations = () => {
                         'success'
                     );
                     getData();
+                    // console.log(data)
                 }
             } catch (error) {
                 console.error("Error deleting recommendation:", error);
@@ -56,6 +63,10 @@ const MyRecommendations = () => {
                 );
             }
         }
+ 
+        //delete operation
+       
+
     };
     
     return (

@@ -71,11 +71,20 @@ const MyQueryDetails = () => {
   }
 
 //  all recommendations fetch 
- const getData = async ()=> {
+//  const getData = async ()=> {
+//     const { data } = await axios( 
+//         `https://assignment-11-pi.vercel.app/allRecommendations?queryId=${queryId}`
+//     )
+//     setAllRecommendations(data)
+//     console.log(allRecommendations)
+// }
+// getData()
+const getData = async ()=> {
     const { data } = await axios( 
         `https://assignment-11-pi.vercel.app/allRecommendations/${queryId}`
     )
     setAllRecommendations(data)
+    console.log(allRecommendations)
 }
 getData()
 
