@@ -19,6 +19,8 @@ import MyQueryDetails from './MyQueryDetails.jsx';
 import MyRecommendations from './MyRecommendations.jsx';
 import RecommendationsForMe from './RecommendationsForMe.jsx';
 import ErrorPage from './ErrorPage.jsx';
+import PrivateRoute from './PrivateRoute.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -49,7 +51,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/myQueries",
-        element:<MyQueries></MyQueries>,
+        element:<PrivateRoute><MyQueries></MyQueries></PrivateRoute>
       },
       {
         path:"/updateQuery/:id",

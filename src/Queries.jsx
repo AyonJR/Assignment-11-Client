@@ -29,7 +29,7 @@ const Queries = () => {
                 <button onClick={() => toggleGridLayout("lg")} className={`px-4 py-2 text-white bg-gray-700 font-semibold rounded-md transition duration-300 ease-in-out transform hover:scale-110 shadow-md focus:outline-none ${gridLayout === 'lg' && 'bg-orange-600'}`}>Grid 3</button>
                 <button onClick={() => toggleGridLayout("sm")} className={`px-4 py-2 text-white bg-gray-700 font-semibold rounded-md transition duration-300 ease-in-out transform hover:scale-110 shadow-md focus:outline-none ${gridLayout === 'sm' && 'bg-orange-600'}`}>Grid 1</button>
             </div>
-            <div className={`mt-10 mx-2 grid lg:grid-cols-${gridLayout === "lg" ? "3" : gridLayout === "md" ? "2" : "1"} md:grid-cols-${gridLayout === "lg" ? "2" : "1"} grid-cols-1 gap-5`}>
+            <div className={`mt-10 mx-2  grid lg:grid-cols-${gridLayout === "lg" ? "3" : gridLayout === "md" ? "2" : "1"} md:grid-cols-${gridLayout === "lg" ? "2" : "1"} grid-cols-1 gap-5`}>
                 {filteredQueries.map(query => <SingleQuery key={query._id} query={query} />)}
             </div>
         </div>
