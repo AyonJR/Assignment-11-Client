@@ -1,4 +1,6 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from 'sweetalert2';
+
 
 const UpdateMyQuery = () => {
    const queryDetails = useLoaderData() ;
@@ -15,47 +17,57 @@ const UpdateMyQuery = () => {
     currentDateAndTime,
     recommendation } = queryDetails;
 
-    const handleUpdate = async (e) => { 
-        
+    const handleUpdate = async (e) => {
         e.preventDefault();
         const form = e.target;
         const productName = form.productName.value;
         const productBrand = form.productBrand.value;
         const imageUrl = form.imageUrl.value;
         const queryTitle = form.queryTitle.value;
-        const boycottingReason = form.boycottingReason.value; 
+        const boycottingReason = form.boycottingReason.value;
     
-    
-        form.reset() 
+        form.reset();
     
         const updatedProductsInfo = {
-            productName : productName ,
-            productBrand : productBrand ,
-            imageUrl : imageUrl ,
-            queryTitle : queryTitle ,
-            boycottingReason : boycottingReason ,
-            userEmail : userEmail , 
-            userName : userName ,
-            userPhoto : userPhoto ,
-            currentDateAndTime : currentDateAndTime ,
-            recommendation : recommendation
-          }
+            productName: productName,
+            productBrand: productBrand,
+            imageUrl: imageUrl,
+            queryTitle: queryTitle,
+            boycottingReason: boycottingReason,
+            userEmail: userEmail,
+            userName: userName,
+            userPhoto: userPhoto,
+            currentDateAndTime: currentDateAndTime,
+            recommendation: recommendation
+        };
     
-        fetch(`https://assignment-11-pi.vercel.app/queries/${_id}` , {
-            method: "PUT" ,
-            headers : {
-                'content-type' : 'application/json'
-            } ,
+        fetch(`https://assignment-11-pi.vercel.app/queries/${_id}`, {
+            method: "PUT",
+            headers: {
+                'content-type': 'application/json'
+            },
             body: JSON.stringify(updatedProductsInfo)
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log(data);
+            // Show success message using SweetAlert2
+            Swal.fire({
+                icon: 'success',
+                title: 'Updated!',
+                text: 'Your item has been updated successfully.',
+            });
         })
-        
-    
-        };
-
+        .catch(error => {
+            console.error('Error updating item:', error);
+            // Show error message using SweetAlert2
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong. Please try again later!',
+            });
+        });
+    };
 
 
     return (
@@ -141,7 +153,7 @@ const UpdateMyQuery = () => {
                         className="bg-gray-700 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
                         type="submit"
                     >
-                        Add Query
+                        Update Query
                     </button>
                 </div>
             </form>

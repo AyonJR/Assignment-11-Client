@@ -1,10 +1,12 @@
 import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
+import axios from "axios";
 
 const MyQueryDetails = () => {
      
     const { user } = useContext(AuthContext)
+    const [allRecommendations , setAllRecommendations] = useState([])
 
     console.log(user)
 
@@ -68,7 +70,17 @@ const MyQueryDetails = () => {
 
   }
 
+//  all recommendations fetch 
+ const getData = async ()=> {
+    const { data } = await axios( 
+        `https://assignment-11-pi.vercel.app/allRecommendations/${queryId}`
+    )
+    setAllRecommendations(data)
+}
+getData()
 
+
+console.log(allRecommendations)
 
 
 

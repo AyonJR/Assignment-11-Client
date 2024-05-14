@@ -4,6 +4,8 @@ import { AuthContext } from "./AuthProvider";
 import MySingleQuery from "./MySingleQuery";
 import { FaPlus } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
+
 
 
 const MyQueries = () => { 
@@ -27,21 +29,47 @@ const MyQueries = () => {
 
 //delete
 const handleDelete = async id => {
-   
-    
-    const {data} = await axios.delete(`https://assignment-11-pi.vercel.app/query/${id}`)
-    // console.log(data)
-    if(data.deletedCount >1){
+  // Show confirmation dialog
+  const confirmResult = await Swal.fire({
+      title: 'Are you sure?',
+      text: 'You will not be able to recover this item!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'Cancel'
+  });
 
-        alert("deleted succesfully")
-        getData()
-    }
-
-
-
-
-}
-
+  // If user confirms deletion
+  if (confirmResult.isConfirmed) {
+      try {
+          const { data } = await axios.delete(`https://assignment-11-pi.vercel.app/query/${id}`);
+          if (data.deletedCount > 0) {
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Deleted!',
+                  text: 'Your item has been deleted.',
+              });
+              // Refresh data after successful deletion
+              getData();
+          } else {
+              Swal.fire({
+                  icon: 'error',
+                  title: 'Oops...',
+                  text: 'Failed to delete the item.',
+              });
+          }
+      } catch (error) {
+          console.error('Error deleting item:', error);
+          Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Something went wrong. Please try again later!',
+          });
+      }
+  }
+};
 
 
  return (

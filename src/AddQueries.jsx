@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "./AuthProvider";
 import Swal from 'sweetalert2';
-import "sweetalert2/dist/sweetalert2.css";
 
 const AddQueries = () => {
    
@@ -17,45 +16,67 @@ const AddQueries = () => {
     const userInfo = { userEmail , userName , userPhoto , currentDateAndTime , }
     console.log(userInfo)
   
- const handleSubmit = async (e) => { 
-        
-    e.preventDefault();
-    const form = e.target;
-    const productName = form.productName.value;
-    const productBrand = form.productBrand.value;
-    const imageUrl = form.imageUrl.value;
-    const queryTitle = form.queryTitle.value;
-    const boycottingReason = form.boycottingReason.value; 
 
-
-    form.reset() 
-
-    const productsInfo = {
-        productName : productName ,
-        productBrand : productBrand ,
-        imageUrl : imageUrl ,
-        queryTitle : queryTitle ,
-        boycottingReason : boycottingReason ,
-        userEmail : userEmail , 
-        userName : userName ,
-        userPhoto : userPhoto ,
-        currentDateAndTime : currentDateAndTime ,
-        recommendation : 0
-      }
-
-    fetch('https://assignment-11-pi.vercel.app/queries' , {
-        method: "POST" ,
-        headers : {
-            'content-type' : 'application/json'
-        } ,
-        body: JSON.stringify(productsInfo)
-    })
-    .then(res => res.json())
-    // .then(data => {
-    //     // console.log(data)
-    // })
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const productName = form.productName.value;
+        const productBrand = form.productBrand.value;
+        const imageUrl = form.imageUrl.value;
+        const queryTitle = form.queryTitle.value;
+        const boycottingReason = form.boycottingReason.value;
     
-
+        form.reset();
+    
+        const productsInfo = {
+            productName: productName,
+            productBrand: productBrand,
+            imageUrl: imageUrl,
+            queryTitle: queryTitle,
+            boycottingReason: boycottingReason,
+            userEmail: userEmail,
+            userName: userName,
+            userPhoto: userPhoto,
+            currentDateAndTime: currentDateAndTime,
+            recommendation: 0
+        };
+    
+        try {
+            const response = await fetch('https://assignment-11-pi.vercel.app/queries', {
+                method: "POST",
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(productsInfo)
+            });
+    
+            if (!response.ok) {
+                throw new Error('Failed to submit query');
+            }
+    
+            const data = await response.json();
+            console.log(data)
+            if (data.insertedId) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: 'Your query has been submitted successfully!',
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong. Please try again later!',
+                });
+            }
+        } catch (error) {
+            console.error("Error submitting query:", error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong. Please try again later!',
+            });
+        }
     };
 
     return (
