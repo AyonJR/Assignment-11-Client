@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter'
 
 const Banner = () => {
@@ -65,7 +66,7 @@ const Banner = () => {
 
 
 
-      <div className="relative w-[900px] bg-gradient-to-r from-gray-300 to-gray-600 mx-auto bottom-40">
+      <div className="relative lg:w-[900px] bg-gradient-to-r from-gray-300 to-gray-600 mx-auto bottom-16 lg:bottom-40">
       <img
         src="https://i.ibb.co/gdCrVNZ/cover-and-banner-of-working-desk-with-gadget-top-view-of-table-working-and-free-space-for-text-with.jpg"
         className="absolute inset-0 object-cover w-full h-full"
@@ -88,16 +89,16 @@ const Banner = () => {
                 Solution is near.. <br className="hidden md:block" />
               </h2>
               <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudan, totam rem aperiam, eaque ipsa
-                quae.
+                Find your best gadget solution through our website....
               </p>
-              <a
+             <Link to={'/Queries'}>
+             <a
                 href="/"
                 aria-label=""
                 className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700 text-white" 
               >
-                Learn more
+                All Queries
+             
                 <svg
                   className="inline-block w-3 ml-2"
                   fill="currentColor"
@@ -106,6 +107,7 @@ const Banner = () => {
                   <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
                 </svg>
               </a>
+              </Link>
             </div>
             
           </div>

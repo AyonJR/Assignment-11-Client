@@ -139,6 +139,12 @@ const MyQueryDetails = () => {
                 </div>
             </form>
         </section>
+ 
+         {/* All recommendations */}
+
+
+
+
 
 
         </div>
