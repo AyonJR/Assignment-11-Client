@@ -12,7 +12,7 @@ const MyRecommendations = () => {
     }, [user]);
     const getData = async () => {
         try {
-            const { data } = await axios(`http://localhost:5000/recommendations/${user?.email}`);
+            const { data } = await axios(`https://assignment-11-pi.vercel.app/recommendations/${user?.email}`);
             setRecommendations(data);
         } catch (error) {
             console.error("Error fetching recommendations:", error);
@@ -25,7 +25,7 @@ const MyRecommendations = () => {
  const handleDelete = async id => {
    
     
-    const {data} = await axios.delete(`http://localhost:5000/recommendations/${id}`)
+    const {data} = await axios.delete(`https://assignment-11-pi.vercel.app/recommendations/${id}`)
     console.log(data)
     if(data.deletedCount >1){
 

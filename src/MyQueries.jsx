@@ -18,7 +18,7 @@ const MyQueries = () => {
      } , [user])
      const getData = async ()=> {
             const { data } = await axios( 
-                `http://localhost:5000/queries/${user?.email}`, {withCredentials:true}
+                `https://assignment-11-pi.vercel.app/queries/${user?.email}`, {withCredentials:true}
             )
             setQuery(data)
         }
@@ -29,8 +29,8 @@ const MyQueries = () => {
 const handleDelete = async id => {
    
     
-    const {data} = await axios.delete(`http://localhost:5000/query/${id}`)
-    console.log(data)
+    const {data} = await axios.delete(`https://assignment-11-pi.vercel.app/query/${id}`)
+    // console.log(data)
     if(data.deletedCount >1){
 
         alert("deleted succesfully")

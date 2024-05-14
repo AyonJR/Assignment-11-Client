@@ -76,7 +76,7 @@ const Register = () => {
         
 		<div className="space-y-2">
 			<div>
-				<button className="w-full px-8 py-3 font-semibold rounded-md dark:bg-cyan-700 dark:text-gray-50">Sign up</button>
+				<button className="w-full px-8 py-3 font-semibold rounded-md dark:bg-gray-700 dark:text-gray-50">Sign up</button>
 			</div>
 			<p className="px-6 text-sm text-center dark:text-gray-600">Already have an account
 				<Link to={"/login"}>

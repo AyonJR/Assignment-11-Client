@@ -6,9 +6,10 @@ import Swal from 'sweetalert2';
 import "sweetalert2/dist/sweetalert2.css";
 import axios from "axios";
 
+
 const Login = () => { 
 
-	const { loginUserWithGoogle } = useContext(AuthContext);
+	const { loginUserWithGoogle , loginUser } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -34,6 +35,26 @@ const Login = () => {
         }
     };
 
+	//login
+	const handleLogin = async (e) => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const email = form.get("email");
+        const password = form.get("password");
+
+        try {
+            await loginUser(email, password);
+            navigate(location?.state ? location.state.from : '/');
+        } catch (error) {
+            console.error("Login Error:", error);
+            Swal.fire({
+                title: 'Error!',
+                text: ' Login failed',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        }
+    };
   
 
 
@@ -75,7 +96,7 @@ const Login = () => {
 				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 			</div>
 		</div>
-		<button type="button" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-cyan-700 dark:text-gray-50">Sign in</button>
+		<button onClick={handleLogin} type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-gray-700 dark:text-gray-50">Sign in</button>
 	</form>
 </div>
         </div>

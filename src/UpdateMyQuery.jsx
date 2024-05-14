@@ -41,7 +41,7 @@ const UpdateMyQuery = () => {
             recommendation : recommendation
           }
     
-        fetch(`http://localhost:5000/queries/${_id}` , {
+        fetch(`https://assignment-11-pi.vercel.app/queries/${_id}` , {
             method: "PUT" ,
             headers : {
                 'content-type' : 'application/json'

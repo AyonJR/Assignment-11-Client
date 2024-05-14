@@ -43,7 +43,7 @@ const AddQueries = () => {
         recommendation : 0
       }
 
-    fetch('http://localhost:5000/queries' , {
+    fetch('https://assignment-11-pi.vercel.app/queries' , {
         method: "POST" ,
         headers : {
             'content-type' : 'application/json'
@@ -51,9 +51,9 @@ const AddQueries = () => {
         body: JSON.stringify(productsInfo)
     })
     .then(res => res.json())
-    .then(data => {
-        console.log(data)
-    })
+    // .then(data => {
+    //     // console.log(data)
+    // })
     
 
     };

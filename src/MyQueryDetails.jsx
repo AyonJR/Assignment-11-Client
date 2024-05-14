@@ -52,7 +52,7 @@ const MyQueryDetails = () => {
 
     //send data to the server
 
-    fetch('http://localhost:5000/recommendations' , {
+    fetch('https://assignment-11-pi.vercel.app/recommendations' , {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
