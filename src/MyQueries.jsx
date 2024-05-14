@@ -65,7 +65,7 @@ const MyQueries = () => {
 
     return (
         <div>
-            {query.length === 0 ? (
+             {query.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full">
                     <p className="text-xl font-semibold mb-4">No queries found.</p>
                     <Link to="/addQueries">

@@ -1,8 +1,18 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# assignment_category_0009
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+# TechQuery
+- Live site link  [ https://final-assignment-11.web.app ]
+
+
+# Features and Characteristics 
+
+-  Enable users to compare features, prices, and reviews of alternative products to make informed decisions.
+- Utilize algorithms to suggest alternative products based on user preferences, browsing history, and previous purchases.
+- Provide users with flexible filtering options such as price range, brand, specifications, and user ratings to narrow down their search.
+- Incorporate user-generated content including reviews, ratings, and testimonials to build trust and credibility in the suggested alternatives.
+-  Integrate with popular e-commerce platforms to facilitate smooth transitions from product exploration to purchase, enhancing the overall user experience.
+

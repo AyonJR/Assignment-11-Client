@@ -14,7 +14,7 @@ const SingleQuery = ({ query }) => {
     } = query;
 
     return (
-        <div className="w-[400px] overflow-hidden bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out hover:shadow-xl">
+        <div className=" overflow-hidden bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out hover:shadow-xl">
             <div className="px-4 py-2 flex justify-between items-center bg-gray-50 animate-pulse">
                 <h1 className="text-lg font-bold">{productName}</h1>
                 <div className="flex items-center space-x-2">
