@@ -24,7 +24,7 @@ const HomeSingleCard = ({ card }) => {
 
     return (
         <div data-aos = "flip-up"
-            className="rounded-lg w-[400px] mt-3 ml-4 overflow-hidden shadow-lg  relative transform transition-transform duration-300 hover:scale-105"
+            className="rounded-lg w-[400px]  mt-3 ml-4  overflow-hidden shadow-lg  relative transform transition-transform duration-300 hover:scale-105"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

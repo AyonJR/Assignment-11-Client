@@ -21,7 +21,7 @@ const StatisticsSection = () => {
         }, 1000); // Delay for simulating API response
     }, []);
     return (
-        <div className="bg-cover bg-center bg-no-repeat py-16" style={{ backgroundImage: 'url(https://i.ibb.co/rGn5JtR/cover-and-banner-of-working-desk-with-gadget-top-view-of-table-working-and-free-space-for-text-with.jpg)' }}>
+        <div className="bg-cover bg-center bg-no-repeat mx-3 py-16" style={{ backgroundImage: 'url(https://i.ibb.co/rGn5JtR/cover-and-banner-of-working-desk-with-gadget-top-view-of-table-working-and-free-space-for-text-with.jpg)' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-semibold text-white sm:text-3xl">
                 Explore Our Platform

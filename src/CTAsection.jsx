@@ -2,12 +2,12 @@
 const CTAsection = () => {
     return (
         <div>
-           <section className="relative bg-cover bg-center bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 py-20 overflow-hidden" style={{backgroundImage: 'url("https://i.ibb.co/Qpw5rrp/people-with-gadgets-banner-vector-27669655.jpg")'}}>
+           <section className="relative bg-cover mx-3 bg-center bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 py-20 overflow-hidden" style={{backgroundImage: 'url("https://i.ibb.co/Qpw5rrp/people-with-gadgets-banner-vector-27669655.jpg")'}}>
             <div className="max-w-4xl mx-auto text-center relative z-10">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-down">Find Your Perfect Match</h2>
                 <p className="text-lg text-white mb-10 animate-fade-in-up">Discover alternative products that meet your needs and preferences.</p>
                 <form className="max-w-md mx-auto animate-fade-in">
-                    <input type="text" className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-600 mb-4" placeholder="Enter product name or category" required />
+                    <input type="text" className="lg:w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-600 mb-4" placeholder="Enter product name or category" required />
                     <button type="submit" className="bg-gray-800 hover:bg-gray-500 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-700 animate-bounce">Search Now</button>
                 </form>
             </div>

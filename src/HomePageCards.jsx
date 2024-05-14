@@ -28,7 +28,7 @@ const HomePageCards = () => {
             <h2 className="text-3xl font-semibold animate__animated animate__bounce">Recent Queries</h2>
         </div>
 
-            <div className="grid lg:grid-cols-3 mt-16 md:grid-cols-2 grid-cols-1 gap-3">
+            <div className="grid lg:grid-cols-3 mt-16 md:grid-cols-2 grid-cols-1 gap-3 ">
                 {
                     cards.map(card => <HomeSingleCard key={card._id} card={card}></HomeSingleCard>)
                 }

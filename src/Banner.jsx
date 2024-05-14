@@ -3,7 +3,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const Banner = () => {
     return (
-        <div className='mx-16'>
+        <div className='lg:mx-16 mx-3' >
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://i.ibb.co/Krxdz7Y/pexels-fauxels-3184451.jpg" className="w-full lg:h-[100vh] filter brightness-75" style={{ background: 'linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7))' }} />
