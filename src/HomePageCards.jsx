@@ -7,7 +7,7 @@ const HomePageCards = () => {
     const [cards, setCards] = useState([]);
 
     useEffect(() => {
-        fetch('https://assignment-11-pi.vercel.app/queries')
+        fetch('http://localhost:5000/queries')
             .then(res => {
                 if (!res.ok) {
                     throw new Error('Network response was not ok');

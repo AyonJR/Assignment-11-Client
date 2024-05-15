@@ -42,12 +42,12 @@ const router = createBrowserRouter([
       },
       {
         path:"/addQueries",
-        element:<AddQueries></AddQueries>
+        element:<PrivateRoute><AddQueries></AddQueries></PrivateRoute>
       },
       {
         path:"/Queries",
         element:<Queries></Queries>,
-        loader: () => fetch(`https://assignment-11-pi.vercel.app/queries`)
+        loader: () => fetch(`http://localhost:5000/queries`)
       },
       {
         path:"/myQueries",
@@ -56,12 +56,12 @@ const router = createBrowserRouter([
       {
         path:"/updateQuery/:id",
         element:<UpdateMyQuery></UpdateMyQuery>,
-        loader: ({params}) => fetch(`https://assignment-11-pi.vercel.app/queryUpdate/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/queryUpdate/${params.id}`)
       },
       {
         path:"/queryDetails/:id",
         element:<MyQueryDetails></MyQueryDetails>,
-        loader: ({params}) => fetch(`https://assignment-11-pi.vercel.app/query/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/query/${params.id}`)
       },
       {
         path:"/myRecommendations",

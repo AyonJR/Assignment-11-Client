@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import axios from "axios";
@@ -28,9 +28,31 @@ const MyQueryDetails = () => {
         recommendation
     } = query;
 
+    console.log(query)
+
     const queryId = _id 
 
 //    console.log('query', queryId)
+
+useEffect(()=> {
+
+    console.log(queryId)
+
+  if(queryId){
+    fetch(`http://localhost:5000/allRecommendations/${queryId}`)
+    .then(res => res.json())
+    .then(data => setAllRecommendations(data))
+  }
+ 
+ 
+ 
+ },[queryId])
+ console.log(allRecommendations)
+
+
+
+
+
  //form 
 
   const handleSubmit = event => { 
@@ -54,7 +76,7 @@ const MyQueryDetails = () => {
 
     //send data to the server
 
-    fetch('https://assignment-11-pi.vercel.app/recommendations' , {
+    fetch('http://localhost:5000/recommendations' , {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
@@ -73,23 +95,22 @@ const MyQueryDetails = () => {
 //  all recommendations fetch 
 //  const getData = async ()=> {
 //     const { data } = await axios( 
-//         `https://assignment-11-pi.vercel.app/allRecommendations?queryId=${queryId}`
+//         `http://localhost:5000/allRecommendations?queryId=${queryId}`
 //     )
 //     setAllRecommendations(data)
 //     console.log(allRecommendations)
 // }
 // getData()
-const getData = async ()=> {
-    const { data } = await axios( 
-        `https://assignment-11-pi.vercel.app/allRecommendations/${queryId}`
-    )
-    setAllRecommendations(data)
-    console.log(allRecommendations)
-}
-getData()
+// const getData = async ()=> {
+//     const { data } = await axios( 
+//         `http://localhost:5000/allRecommendations/${queryId}`
+//     )
+//     setAllRecommendations(data)
+//     console.log(allRecommendations)
 
+// }
+// getData()
 
-console.log(allRecommendations)
 
 
 
@@ -98,7 +119,7 @@ console.log(allRecommendations)
     return (
         <div className="">
             <div className="flex justify-center">
-            <div className="w-[672px] overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+            <div className="w-[672px] mt-5 lg:mx-0 mx-3 overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
                 <img className="object-center w-full h-64" src={imageUrl} alt="Product" />
 
                 <div className="p-6">
@@ -113,7 +134,7 @@ console.log(allRecommendations)
                     </div>
 
                     <div className="mt-4">
-                        <div className="flex justify-between items-center">
+                        <div className="flex lg:flex-row flex-col justify-between items-center">
                             <div className="flex items-center">
                                 <img className="object-cover h-10 rounded-full" src={userPhoto} alt="Avatar" />
                                 <a href="#" className="mx-2 font-semibold text-gray-700 dark:text-gray-200" role="link">{userName}</a><br />
@@ -127,7 +148,7 @@ console.log(allRecommendations)
             </div>
 
     {/* form recommendation */}
-    <section className="max-w-2xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+    <section className="max-w-2xl mx-3 mt-3  p-6 lg:mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
             <div className="flex justify-center">
             <h2 className="text-lg font-semibold text-gray-700 capitalize dark:text-orange-600">Recommendations</h2>
             </div>
@@ -156,15 +177,46 @@ console.log(allRecommendations)
                 </div>
 
                 <div className="flex justify-center mt-6">
-                    <button className="px-8 py-2.5 leading-5 text-orange-600 transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-orange-600">Add Recommendations</button>
+                    <button className="px-8 py-2.5 leading-5 text-orange-600 transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-800 focus:outline-none ">Add Recommendations</button>
                 </div>
             </form>
         </section>
  
          {/* All recommendations */}
+         <div className="mt-5 flex justify-center ">
+            <h2 className="text-3xl font-semibold ">All Recommendations</h2>
+         </div>
 
 
 
+         <div className="bg-gray-800 mt-4 lg:mx-0 mx-3 rounded-lg p-4 overflow-hidden relative">
+    {/* <!-- Recommendation Section --> */}
+    {
+        allRecommendations.map((singleRecommend, index) => (
+            <div className="my-4" key={index}>
+                {/* <!-- Recommendation Name --> */}
+                <h2 className="text-lg font-semibold text-white">{singleRecommend.name}</h2>
+                {/* <!-- Recommendation Image --> */}
+                <img className="w-24 h-24  rounded-lg mt-2 transform transition duration-300 hover:scale-110" src={singleRecommend.image} alt="" />
+                {/* <!-- Reason --> */}
+                <p className="mt-2 text-white">{singleRecommend.reason}</p>
+                {/* <!-- Logged-in User Info --> */}
+                <div className="flex justify-between items-center mt-2">
+                    <div className="flex flex-col ">
+                        
+                        <p className="text-sm font-medium text-white">User: {singleRecommend.loggedInUserName}</p>
+                        <p className="text-sm font-medium text-white">Email: {singleRecommend.loggedInUserEmail}</p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                    <p className="text-sm font-medium text-white">Date: {singleRecommend.loggedInUserDate}</p>
+                       
+                
+                    </div>
+                </div>
+            </div>
+        ))
+    }
+</div>
 
 
 

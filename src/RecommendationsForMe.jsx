@@ -11,7 +11,7 @@ const RecommendationsForMe = () => {
     useEffect(() => {
         const getData = async () => {
             try {
-                const { data } = await axios(`https://assignment-11-pi.vercel.app/recommendation/${user?.email}`);
+                const { data } = await axios(`http://localhost:5000/recommendation/${user?.email}`);
                 setRecommendationsForMe(data);
             } catch (error) {
                 console.error("Error fetching recommendations:", error);

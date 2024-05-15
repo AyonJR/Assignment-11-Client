@@ -41,7 +41,7 @@ const UpdateMyQuery = () => {
             recommendation: recommendation
         };
     
-        fetch(`https://assignment-11-pi.vercel.app/queries/${_id}`, {
+        fetch(`http://localhost:5000/queries/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -140,7 +140,7 @@ const UpdateMyQuery = () => {
                         Boycotting Reason Details
                     </label>
                     <textarea
-                        className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-50 text-orange-600 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-50 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="boycottingReason"
                         name="boycottingReason"
                         

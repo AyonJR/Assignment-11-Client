@@ -26,14 +26,14 @@ const AuthProvider = ({ children }) => {
             setLoading(false);
             // if user exists issue a token
             if(user){
-                axios.post('https://assignment-11-pi.vercel.app/jwt', loggedUser , { withCredentials:true }) 
+                axios.post('http://localhost:5000/jwt', loggedUser , { withCredentials:true }) 
                 // .then(res => {
                 //     // console.log( 'token response',res.data)
                 // }
                 // )
             } 
             else{
-              axios.post('https://assignment-11-pi.vercel.app/logout' , loggedUser , {
+              axios.post('http://localhost:5000/logout' , loggedUser , {
                 withCredentials:true
               }) 
               .then(res => {

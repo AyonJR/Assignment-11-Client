@@ -5,7 +5,7 @@
 
 
 # TechQuery
-- Live site link  [ https://final-assignment-11.web.app ]
+- Live site link  [ http://localhost:5000 ]
 
 
 # Features and Characteristics 
