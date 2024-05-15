@@ -39,7 +39,7 @@ useEffect(()=> {
     console.log(queryId)
 
   if(queryId){
-    fetch(`http://localhost:5000/allRecommendations/${queryId}`)
+    fetch(`https://assignment-11-pi.vercel.app/allRecommendations/${queryId}`)
     .then(res => res.json())
     .then(data => setAllRecommendations(data))
   }
@@ -76,7 +76,7 @@ useEffect(()=> {
 
     //send data to the server
 
-    fetch('http://localhost:5000/recommendations' , {
+    fetch('https://assignment-11-pi.vercel.app/recommendations' , {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
@@ -95,7 +95,7 @@ useEffect(()=> {
 //  all recommendations fetch 
 //  const getData = async ()=> {
 //     const { data } = await axios( 
-//         `http://localhost:5000/allRecommendations?queryId=${queryId}`
+//         `https://assignment-11-pi.vercel.app/allRecommendations?queryId=${queryId}`
 //     )
 //     setAllRecommendations(data)
 //     console.log(allRecommendations)
@@ -103,7 +103,7 @@ useEffect(()=> {
 // getData()
 // const getData = async ()=> {
 //     const { data } = await axios( 
-//         `http://localhost:5000/allRecommendations/${queryId}`
+//         `https://assignment-11-pi.vercel.app/allRecommendations/${queryId}`
 //     )
 //     setAllRecommendations(data)
 //     console.log(allRecommendations)

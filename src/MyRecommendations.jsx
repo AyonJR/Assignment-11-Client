@@ -19,7 +19,7 @@ const MyRecommendations = () => {
 
     const getData = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:5000/recommendations/${user?.email}`);
+            const { data } = await axios.get(`https://assignment-11-pi.vercel.app/recommendations/${user?.email}`);
             setRecommendations(data);
             console.log(recommendations)
         } catch (error) {
@@ -44,7 +44,7 @@ const MyRecommendations = () => {
         // If confirmed, proceed with deletion
         if (result.isConfirmed) {
             try {
-                const { data } = await axios.delete(`http://localhost:5000/recommendations/${id}`);
+                const { data } = await axios.delete(`https://assignment-11-pi.vercel.app/recommendations/${id}`);
                 if (data.deletedCount > 0) {
                     Swal.fire(
                         'Deleted!',

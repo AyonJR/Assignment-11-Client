@@ -5,7 +5,7 @@
 
 
 # TechQuery
-- Live site link  [ http://localhost:5000 ]
+- Live site link  [ https://assignment-11-pi.vercel.app ]
 
 
 # Features and Characteristics 

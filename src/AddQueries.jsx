@@ -42,7 +42,7 @@ const AddQueries = () => {
         };
     
         try {
-            const response = await fetch('http://localhost:5000/queries', {
+            const response = await fetch('https://assignment-11-pi.vercel.app/queries', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'

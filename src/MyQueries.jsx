@@ -16,7 +16,7 @@ const MyQueries = () => {
 
     const getData = async () => {
         try {
-            const { data } = await axios(`http://localhost:5000/queries/${user?.email}`, { withCredentials: true });
+            const { data } = await axios(`https://assignment-11-pi.vercel.app/queries/${user?.email}`, { withCredentials: true });
             setQuery(data);
         } catch (error) {
             console.error("Error fetching queries:", error);
@@ -37,7 +37,7 @@ const MyQueries = () => {
 
         if (confirmResult.isConfirmed) {
             try {
-                const { data } = await axios.delete(`http://localhost:5000/query/${id}`);
+                const { data } = await axios.delete(`https://assignment-11-pi.vercel.app/query/${id}`);
                 if (data.deletedCount > 0) {
                     Swal.fire({
                         icon: 'success',
