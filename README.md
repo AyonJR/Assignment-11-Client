@@ -5,7 +5,7 @@
 
 
 # TechQuery
-- Live site link  [ https://assignment-11-pi.vercel.app ]
+- Live site link  [ https://final-assignment-11.web.app/ ]
 
 
 # Features and Characteristics 
