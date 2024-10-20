@@ -1,18 +1,31 @@
 
+# Overview
+- TechQuery is a platform designed to connect users with personalized technical solutions and insights.
+- Provides tailored responses to technical queries.
+- Facilitates efficient knowledge sharing among technical enthusiasts.
+- Offers quick solutions to complex technical problems.
+- Enhances accessibility to technical resources and information.
+- Promotes community engagement through discussions and Q&A sessions.
 
-# assignment_category_0009
+
+# Features  
+- Utilizes algorithms to suggest products based on user preferences, browsing history, and previous purchases.
+- Enables users to compare features, prices, and reviews, with flexible filtering options like price range, brand, specifications, and user ratings.
+- Incorporates reviews, ratings, and testimonials to build trust, and integrates with e-commerce platforms for smooth transitions to purchase.
 
 
+# Technologies used
+- tailwind css
+- axios
+- react 
+- firebase 
+- mongodb
+- expressjs
+- vercel
 
-# TechQuery
-- Live site link  [ https://final-assignment-11.web.app/ ]
 
-
-# Features and Characteristics 
-
--  Enable users to compare features, prices, and reviews of alternative products to make informed decisions.
-- Utilize algorithms to suggest alternative products based on user preferences, browsing history, and previous purchases.
-- Provide users with flexible filtering options such as price range, brand, specifications, and user ratings to narrow down their search.
-- Incorporate user-generated content including reviews, ratings, and testimonials to build trust and credibility in the suggested alternatives.
--  Integrate with popular e-commerce platforms to facilitate smooth transitions from product exploration to purchase, enhancing the overall user experience.
-
+# Steps to clone the project
+- Clone the repository: Download the project repository from GitHub to your local machine.
+- Navigate into the project directory: Change your directory to the project's root folder.
+- Install dependencies: Install all the required dependencies and packages specified in the project.
+- Run the project: Start the application to run it on your local machine.
