@@ -23,7 +23,7 @@ const HomeSingleCard = ({ card }) => {
   return (
     <div
       data-aos="fade-up"
-      className=" bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+      className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -39,7 +39,7 @@ const HomeSingleCard = ({ card }) => {
       {/* Card content */}
       <div className="p-4 custom-font">
         {/* Product brand */}
-        <p className="uppercase text-xs font-bold text-black mb-1 cursor-pointer ">
+        <p className="uppercase text-xs font-bold text-black mb-1 cursor-pointer">
           {productBrand}
         </p>
 
