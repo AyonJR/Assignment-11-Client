@@ -2,7 +2,7 @@
 const CTAsection = () => {
     return (
         <div>
-           <section className="relative bg-cover mx-3 bg-center bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 py-20 overflow-hidden" style={{backgroundImage: 'url("https://i.ibb.co/Qpw5rrp/people-with-gadgets-banner-vector-27669655.jpg")'}}>
+           <section className="relative bg-cover mx-3 bg-center bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 py-20 overflow-hidden" style={{backgroundImage: 'url("https://i.ibb.co/Krxdz7Y/pexels-fauxels-3184451.jpg")'}}>
             <div className="max-w-4xl mx-auto text-center relative z-10">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-down">Find Your Perfect Match</h2>
                 <p className="text-lg text-white mb-10 animate-fade-in-up">Discover alternative products that meet your needs and preferences.</p>

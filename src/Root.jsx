@@ -4,13 +4,16 @@ import Footer from "./Footer";
 
 const Root = () => {
     return (
-        <div className=""> 
-            <div className="lg:mx-8">
-                <Navbar></Navbar>
+        <div
+            className="bg-white"
+           
+        >
+            <div className="lg:mx-20">
+                <Navbar />
             </div>
-            <Outlet></Outlet>
+            <Outlet />
             <div className="mt-[40vh]">
-                <Footer></Footer>
+                <Footer />
             </div>
         </div>
     );

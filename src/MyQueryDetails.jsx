@@ -39,7 +39,7 @@ useEffect(()=> {
     console.log(queryId)
 
   if(queryId){
-    fetch(`https://assignment-11-pi.vercel.app/allRecommendations/${queryId}`)
+    fetch(`https://final-assignment-11.web.app/allRecommendations/${queryId}`)
     .then(res => res.json())
     .then(data => setAllRecommendations(data))
   }
@@ -76,7 +76,7 @@ useEffect(()=> {
 
     //send data to the server
 
-    fetch('https://assignment-11-pi.vercel.app/recommendations' , {
+    fetch('https://final-assignment-11.web.app/recommendations' , {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
@@ -95,7 +95,7 @@ useEffect(()=> {
 //  all recommendations fetch 
 //  const getData = async ()=> {
 //     const { data } = await axios( 
-//         `https://assignment-11-pi.vercel.app/allRecommendations?queryId=${queryId}`
+//         `https://final-assignment-11.web.app/allRecommendations?queryId=${queryId}`
 //     )
 //     setAllRecommendations(data)
 //     console.log(allRecommendations)
@@ -103,7 +103,7 @@ useEffect(()=> {
 // getData()
 // const getData = async ()=> {
 //     const { data } = await axios( 
-//         `https://assignment-11-pi.vercel.app/allRecommendations/${queryId}`
+//         `https://final-assignment-11.web.app/allRecommendations/${queryId}`
 //     )
 //     setAllRecommendations(data)
 //     console.log(allRecommendations)
@@ -135,7 +135,7 @@ useEffect(()=> {
 
                     <div className="mt-4">
                         <div className="flex lg:flex-row flex-col justify-between items-center">
-                            <div className="flex items-center">
+                            <div className="flex lg:items-center">
                                 <img className="object-cover h-10 rounded-full" src={userPhoto} alt="Avatar" />
                                 <a href="#" className="mx-2 font-semibold text-gray-700 dark:text-gray-200" role="link">{userName}</a><br />
                                 <p className="text-gray-600 dark:text-gray-400">{userEmail}</p>

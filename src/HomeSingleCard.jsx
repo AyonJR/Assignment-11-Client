@@ -1,89 +1,81 @@
-import { useEffect, useState } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HomeSingleCard = ({ card }) => {
-    useEffect(() => {
-        AOS.init();
-    }, []);
-    const {  
-        productName,
-        productBrand,
-        imageUrl,
-        queryTitle,
-        boycottingReason,
-        userEmail,
-        userName,
-        userPhoto,
-        currentDateAndTime,
-        recommendation
-    } = card;
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
-    // Add state for animation
-    const [isHovered, setIsHovered] = useState(false);
+  const {
+    productName,
+    productBrand,
+    imageUrl,
+    queryTitle,
+    userName,
+    userPhoto,
+    currentDateAndTime,
+  } = card;
 
-    return (
-        <div data-aos = "flip-up"
-            className="rounded-lg   mt-3   overflow-hidden shadow-lg  relative transform transition-transform duration-300 hover:scale-105"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            {/* Image */}
-            <img
-                src={imageUrl}
-                alt={productName}
-                className="w-full h-48 object-cover"
-            />
+  // Add state for animation
+  const [isHovered, setIsHovered] = useState(false);
 
-            {/* Card content */}
-            <div className="p-6">
-                {/* Product name */}
-                <h2 className="text-xl font-semibold mb-2">{productName}</h2>
+  return (
+    <div
+      data-aos="fade-up"
+      className=" bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Image */}
+      <div className="bg-white h-32 rounded-t-lg">
+        <img
+          src={imageUrl}
+          alt={productName}
+          className="w-full h-full object-cover rounded-t-lg transform hover:scale-95 transition-transform duration-300"
+        />
+      </div>
 
-                {/* Product brand */}
-                <p className="text-sm text-gray-600 mb-4">{productBrand}</p>
+      {/* Card content */}
+      <div className="p-4 custom-font">
+        {/* Product brand */}
+        <p className="uppercase text-xs font-bold text-black mb-1 cursor-pointer ">
+          {productBrand}
+        </p>
 
-                {/* Query title */}
-                <h3 className="font-semibold mb-2">Query Title:</h3>
-                <p className="text-gray-700">{queryTitle}</p>
+        {/* Product name */}
+        <h2 className="font-semibold text-gray-700 text-sm mb-2 cursor-pointer hover:text-gray-900">
+          {productName}
+        </h2>
 
-                {/* Boycotting reason */}
-                <h3 className="font-semibold mt-2 mb-2">Boycotting Reason:</h3>
-                <p className="text-gray-700">{boycottingReason}</p>
+        {/* Query title */}
+        <p className="text-xs text-gray-600 mb-4">{queryTitle}</p>
 
-                
-
-                {/* Additional details */}
-                <div className="mt-4 flex items-center">
-                    {/* User photo */}
-                    <img
-                        src={userPhoto}
-                        alt={userName}
-                        className="w-8 h-8 rounded-full mr-2"
-                    />
-                    {/* User name */}
-                    <p className="text-sm text-gray-600">{userName}</p>
-                    {/* Date and time */}
-                    <p className="text-sm text-gray-600 ml-auto">{currentDateAndTime}</p>
-                </div>
-            </div>
-
-            {/* Overlay for hover effect */}
-            <div
-                className={`absolute inset-0 bg-black opacity-10 transition duration-300 ${isHovered ? 'opacity-0' : ''}`}
-            ></div>
-
-            {/* Overlay content */}
-            <div
-                className={`absolute inset-0 p-6 text-white transition duration-300 ${
-                    isHovered ? 'opacity-100' : 'opacity-0'
-                }`}
-            >
-                <h2 className="text-3xl font-semibold mb-4">{productName}</h2>
-                <p className="text-sm">{queryTitle}</p>
-            </div>
+        {/* Author details */}
+        <div className="flex items-center mt-2">
+          <img
+            src={userPhoto}
+            alt={userName}
+            className="w-8 h-8 rounded-full mr-2"
+          />
+          <p className="text-xs text-gray-500">
+            By{" "}
+            <span className="font-semibold hover:text-gray-700 cursor-pointer">
+              {userName}
+            </span>{" "}
+            {currentDateAndTime}
+          </p>
         </div>
-    );
+      </div>
+
+      {/* Hover overlay effect */}
+      <div
+        className={`absolute inset-0 bg-black opacity-10 transition duration-300 ${
+          isHovered ? "opacity-0" : ""
+        }`}
+      ></div>
+    </div>
+  );
 };
 
 export default HomeSingleCard;
