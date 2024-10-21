@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -17,15 +17,10 @@ const HomeSingleCard = ({ card }) => {
     currentDateAndTime,
   } = card;
 
-  // Add state for animation
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <div
       data-aos="fade-up"
-      className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 relative"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className="bg-white rounded-lg overflow-hidden  transition-shadow duration-300 transform hover:scale-105 relative"
     >
       {/* Image */}
       <div className="bg-white h-32 rounded-t-lg">
@@ -37,7 +32,7 @@ const HomeSingleCard = ({ card }) => {
       </div>
 
       {/* Card content */}
-      <div className="p-4 custom-font">
+      <div className="p-4 bg-white">
         {/* Product brand */}
         <p className="uppercase text-xs font-bold text-black mb-1 cursor-pointer">
           {productBrand}
@@ -67,13 +62,6 @@ const HomeSingleCard = ({ card }) => {
           </p>
         </div>
       </div>
-
-      {/* Hover overlay effect */}
-      <div
-        className={`absolute inset-0 bg-black opacity-10 transition duration-300 ${
-          isHovered ? "opacity-0" : ""
-        }`}
-      ></div>
     </div>
   );
 };

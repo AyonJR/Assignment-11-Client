@@ -2,6 +2,8 @@ import AboutUs from "./AboutUs";
 import Advertise from "./Advertise";
 import Banner from "./Banner";
 import HomePageCards from "./HomePageCards";
+import HomeVideo from "./HomeVideo";
+import SomeRecommendations from "./SomeRecommendations";
 
 
 const Home = () => {
@@ -17,6 +19,14 @@ const Home = () => {
            <div className="mt-32">
             <HomePageCards></HomePageCards>
            </div>
+           <div className="mt-32">
+            <HomeVideo></HomeVideo>
+           </div>
+           <div className="mt-32">
+            <SomeRecommendations></SomeRecommendations>
+           </div>
+
+
            {/* <div className="mt-16">
             <StatisticsSection></StatisticsSection>
            </div>
