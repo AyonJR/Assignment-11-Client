@@ -60,10 +60,10 @@ const Login = () => {
 
 
     return (
-        <div className="flex justify-center">
-            <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-50 dark:text-gray-800">
+        <div className="flex justify-center mt-10">
+            <div className="w-full max-w-md p-4 rounded-md  sm:p-8 bg-white">
 	<h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
-	<p className="text-sm text-center dark:text-gray-600">Dont have account?
+	<p className="text-sm text-center dark:text-black">Dont have account?
 		<Link to={"/register"}>
         <a href="#" rel="noopener noreferrer" className="focus:underline hover:underline  dark:text-violet-600">Sign up here</a>
         </Link>
@@ -78,25 +78,25 @@ const Login = () => {
 		
 	</div>
 	<div className="flex items-center w-full my-4">
-		<hr  className="w-full dark:text-gray-600" />
-		<p className="px-3 dark:text-gray-600">OR</p>
-		<hr  className="w-full dark:text-gray-600" />
+		<hr  className="w-full dark:text-black" />
+		<p className="px-3 dark:text-black">OR</p>
+		<hr  className="w-full dark:text-black" />
 	</div>
 	<form noValidate="" action="" className="space-y-8">
 		<div className="space-y-4">
 			<div className="space-y-2">
 				<label htmlFor="email" className="block text-sm">Email address</label>
-				<input type="email" name="email" id="email" placeholder="email" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+				<input type="email" name="email" id="email" placeholder="email" className="w-full px-3 py-2 border rounded-md dark:bg-white dark:text-black dark:border-black" />
 			</div>
 			<div className="space-y-2">
 				<div className="flex justify-between">
 					<label htmlFor="password" className="text-sm">Password</label>
 					
 				</div>
-				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md dark:border-black dark:bg-white dark:text-black focus:dark:border-black" />
 			</div>
 		</div>
-		<button onClick={handleLogin} type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-gray-700 dark:text-gray-50">Sign in</button>
+		<button onClick={handleLogin} type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-black border-black border dark:text-white">Sign in</button>
 	</form>
 </div>
         </div>

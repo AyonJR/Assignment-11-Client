@@ -39,20 +39,20 @@ const MySingleQuery = ({ mySingleQuery, handleDelete }) => {
 
       {/* Overlay with Buttons */}
       <div className="absolute inset-0 flex flex-col justify-center items-center w-full h-full bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-        <div className="p-4 bg-white rounded-lg shadow-lg dark:bg-gray-800">
-          <h3 className="py-2 font-bold text-center text-gray-800 uppercase dark:text-white">
+        <div className="p-4 bg-white rounded-lg shadow-lg ">
+          <h3 className="py-2 font-bold text-center text-gray-800 uppercase dark:text-black">
             {productName}
           </h3>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-cyan-800 dark:bg-gray-800">
+          <div className="flex items-center justify-between px-3 py-2 ">
             <Link to={`/updateQuery/${_id}`}>
-              <button className="px-4 py-2 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none animate__fadeInLeft">
+              <button className="px-4 py-2 text-xs font-semibold text-black uppercase transition-colors duration-300 transform dark:hover:bg-black hover:text-white  focus:outline-none animate__fadeInLeft">
                 Update
               </button>
             </Link>
             <button
               onClick={() => handleDelete(_id)}
-              className="px-4 py-2 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none animate__fadeIn"
+              className="px-4 py-2 text-xs font-semibold text-black uppercase transition-colors duration-300 transform dark:hover:bg-black hover:text-white  focus:outline-none animate__fadeInLeft"
             >
               Delete
             </button>
@@ -60,7 +60,7 @@ const MySingleQuery = ({ mySingleQuery, handleDelete }) => {
 
           <div className="flex justify-center mt-2">
             <Link to={`/queryDetails/${_id}`}>
-              <button className="px-4 py-2 w-full text-xs font-semibold bg-orange-600 text-white uppercase transition-colors duration-300 transform rounded hover:bg-gray-700 dark:hover:bg-orange-700 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none animate__fadeInRight">
+              <button className="px-4 py-2 w-full text-xs font-semibold bg-black text-white uppercase transition-colors duration-300 transform rounded  focus:outline-none animate__fadeInRight">
                 Details
               </button>
             </Link>

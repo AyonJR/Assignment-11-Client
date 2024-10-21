@@ -153,31 +153,31 @@ useEffect(()=> {
             <h2 className="text-lg font-semibold text-black capitalize ">Recommendations</h2>
             </div>
 
-            <form onSubmit={handleSubmit} className="">
+            <form onSubmit={handleSubmit} className="custom-font">
                 <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                     <div>
                         <label className="text-black" htmlFor="username">Title</label>
-                        <input id="username" name="title" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-orange-600 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                        <input id="username" name="title" type="text" className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md  0 dark:border-black focus:outline-none focus:ring" />
                     </div>
 
                     <div>
-                        <label className="text-gray-700 dark:text-gray-200" htmlFor="emailAddress">Product Name</label>
-                        <input id="emailAddress" name="name" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-orange-600 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                        <label className="text-black" htmlFor="emailAddress">Product Name</label>
+                        <input id="emailAddress" name="name" type="text" className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md  0 dark:border-black focus:outline-none focus:ring" />
                     </div>
 
                     <div>
-                        <label className="text-gray-700 dark:text-gray-200" htmlFor="password">Product Image</label>
-                        <input id="password" name="image" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-orange-600 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                        <label className="text-black" htmlFor="password">Product Image</label>
+                        <input id="password" name="image" type="text"className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md  0 dark:border-black focus:outline-none focus:ring" />
                     </div>
 
                     <div>
-                        <label className="text-gray-700 dark:text-gray-200" htmlFor="passwordConfirmation">Reason</label>
-                        <input id="passwordConfirmation" name="reason" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-orange-600 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                        <label className="text-black" htmlFor="passwordConfirmation">Reason</label>
+                        <input id="passwordConfirmation" name="reason" type="text" className="block w-full px-4 py-2 mt-2 text-black bg-white border border-gray-200 rounded-md  0 dark:border-black focus:outline-none focus:ring" />
                     </div>
                 </div>
 
                 <div className="flex justify-center mt-6">
-                    <button className="px-8 py-2.5 leading-5 text-orange-600 transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-800 focus:outline-none ">Add Recommendations</button>
+                    <button className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-black rounded-mdfocus:outline-none ">Add Recommendations</button>
                 </div>
             </form>
         </section>
@@ -189,7 +189,7 @@ useEffect(()=> {
 
 
 
-         <div className="bg-gray-800 mt-4 lg:mx-0 mx-3 rounded-lg p-4 overflow-hidden relative">
+         <div className="bg-black mt-4 lg:mx-0 mx-3 rounded-lg p-4 overflow-hidden relative">
     {/* <!-- Recommendation Section --> */}
     {
         allRecommendations.map((singleRecommend, index) => (
