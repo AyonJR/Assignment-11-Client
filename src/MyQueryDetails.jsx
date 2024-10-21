@@ -119,17 +119,17 @@ useEffect(()=> {
     return (
         <div className="">
             <div className="flex justify-center">
-            <div className="w-[672px] mt-5 lg:mx-0 mx-3 overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+            <div className="w-[672px] mt-5 lg:mx-0 mx-3 overflow-hidden bg-white rounded-lg shadow-md ">
                 <img className="object-center w-full h-64" src={imageUrl} alt="Product" />
 
                 <div className="p-6">
                     <div>
-                        <span className="text-xs font-medium text-orange-600 uppercase dark:text-orange-600">{productBrand}</span>
-                        <a href="#" className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline"  role="link">{productName}</a>
-                        <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{queryTitle}</p>
+                        <span className="text-xs font-medium text-orange-600 uppercase dark:text-black">{productBrand}</span>
+                        <a href="#" className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-black hover:underline"  role="link">{productName}</a>
+                        <p className="mt-2 text-sm text-black">{queryTitle}</p>
                         <div className="flex justify-between">
-                        <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">issue : {boycottingReason}</p>
-                        <p className="mt-2 mr-3 text-sm text-gray-600 dark:text-gray-400">recommendation : {recommendation}</p>
+                        <p className="mt-2 text-sm text-black dark:text-black">issue : {boycottingReason}</p>
+                        <p className="mt-2 mr-3 text-sm text-black dark:text-black">recommendation : {recommendation}</p>
                         </div>
                     </div>
 
@@ -137,10 +137,10 @@ useEffect(()=> {
                         <div className="flex lg:flex-row flex-col justify-between items-center">
                             <div className="flex lg:items-center">
                                 <img className="object-cover h-10 rounded-full" src={userPhoto} alt="Avatar" />
-                                <a href="#" className="mx-2 font-semibold text-gray-700 dark:text-gray-200" role="link">{userName}</a><br />
-                                <p className="text-gray-600 dark:text-gray-400">{userEmail}</p>
+                                <a href="#" className="mx-2 font-semibold text-black" role="link">{userName}</a><br />
+                                <p className="text-black">{userEmail}</p>
                             </div>
-                            <span className="mx-1 text-xs text-gray-600 dark:text-gray-300">{currentDateAndTime}</span>
+                            <span className="mx-1 text-xstext-black">{currentDateAndTime}</span>
                         </div>
                     </div>
                 </div>
@@ -148,15 +148,15 @@ useEffect(()=> {
             </div>
 
     {/* form recommendation */}
-    <section className="max-w-2xl mx-3 mt-3  p-6 lg:mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+    <section className="max-w-2xl mx-3 mt-3  p-6 lg:mx-auto bg-white rounded-md shadow-md ">
             <div className="flex justify-center">
-            <h2 className="text-lg font-semibold text-gray-700 capitalize dark:text-orange-600">Recommendations</h2>
+            <h2 className="text-lg font-semibold text-black capitalize ">Recommendations</h2>
             </div>
 
             <form onSubmit={handleSubmit} className="">
                 <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                     <div>
-                        <label className="text-gray-700 dark:text-gray-200" htmlFor="username">Title</label>
+                        <label className="text-black" htmlFor="username">Title</label>
                         <input id="username" name="title" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-orange-600 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                     </div>
 

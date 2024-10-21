@@ -64,12 +64,12 @@ const MyQueries = () => {
     };
 
     return (
-        <div>
+        <div className="custom-font">
              {query.length === 0 ? (
-                <div className="flex flex-col items-center justify-center h-full">
+                <div className="flex flex-col items-center justify-center  h-full">
                     <p className="text-xl font-semibold mb-4">No queries found.</p>
                     <Link to="/addQueries">
-                        <button className="bg-gray-800 text-white px-8 py-4 rounded-full flex items-center text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-110 hover:shadow-lg">
+                        <button className="bg-black text-white px-8 py-4 rounded-full flex items-center text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-110 hover:shadow-lg">
                             <FaPlus className="mr-2 text-2xl animate-bounce" /> Add Query
                         </button>
                     </Link>
@@ -84,7 +84,7 @@ const MyQueries = () => {
                             </div>
                             <div className="flex justify-center ">
                                 <Link to={'/addQueries'}>
-                                    <button className="bg-gray-800 text-white px-8 py-4 rounded-full flex items-center text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-110 hover:shadow-lg">
+                                    <button className="bg-black text-white px-8 py-4 rounded-full flex items-center text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-110 hover:shadow-lg">
                                         <FaPlus className="mr-2 text-2xl animate-bounce" /> Add Queries
                                     </button>
                                 </Link>
@@ -92,8 +92,11 @@ const MyQueries = () => {
                         </div>
                     </div>
                     <div className="mt-14 flex justify-center">
-                        <h2 className="text-3xl font-semibold animate-pulse">My Queries</h2>
+                        <h2 className="text-3xl font-semibold custom-font ">My Queries</h2>
                     </div>
+                    <div className="flex justify-center mt-4">
+        <hr className="w-36 bg-black border-black border-t-[3px]" />
+      </div>
                     <div className="grid mt-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
                         {query.map(mySingleQuery => (
                             <MySingleQuery key={mySingleQuery._id} mySingleQuery={mySingleQuery} handleDelete={handleDelete} />
